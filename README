@@ -1,0 +1,26 @@
+#kepler_to_cartesian
+
+Simulation that calculates the position in three-dimensional Cartesian coordinates of a celestial body over time given the keplerian orbital elements
+
+Each line of the input file is formatted as follows (each line rappresents a body):
+time i a e inc Omega w Theta E M
+
+Where:
+
+time: time (years)
+i: index
+a: semi major axis (AU)
+e: eccentricity:
+inc: inclination (radians)
+Omega: longitude of the ascending node (radians)
+w: argument of periapsis (radians)
+Theta: true anomaly (radians)
+E: eccentric anomaly (radians)
+M: mean anomaly (radians)
+
+True anomaly and eccentric_anomaly are skipped in the file deserialization which is why you can simply leave them as 0,
+however if you need them you can add them by un-commenting the line that deserialize's the value (and you have comment a word.next())
+
+The following formulization was followed
+https://downloads.rene-schwarz.com/download/M001-Keplerian_Orbit_Elements_to_Cartesian_State_Vectors.pdf
+All credit for this pdf goes to M.Eng. René Schwarz
