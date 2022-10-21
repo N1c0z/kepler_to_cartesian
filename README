@@ -10,7 +10,7 @@ Where:
 time: time (years)
 i: index
 a: semi major axis (AU)
-e: eccentricity:
+e: eccentricity
 inc: inclination (radians)
 Omega: longitude of the ascending node (radians)
 w: argument of periapsis (radians)
